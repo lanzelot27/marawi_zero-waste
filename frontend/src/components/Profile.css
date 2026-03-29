@@ -1,0 +1,154 @@
+/* General layout for the community page */
+.community-page {
+    display: flex;
+    flex-direction: row;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Profile Background */
+.community-content {
+    flex: 1;
+    padding: 20px;
+    background-image: url('/src/assets/msu1.png'); /* Same background as dashboard */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay applied only to the background */
+.community-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 229, 200, 0.8); /* Add overlay for readability */
+    z-index: 1; /* Ensure it's below the content */
+}
+
+/* Profile Container Content */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 2; /* Place above the background and overlay */
+    position: relative; /* Ensure proper stacking */
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture Section */
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-pic-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #2e7d32; /* Dark green border */
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+.photo-button {
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2; /* Ensure buttons are above the overlay */
+}
+
+.photo-button:hover {
+    background-color: #256526; /* Darker green on hover */
+}
+
+/* Account Details Section */
+.account-details-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Fixed width for consistency */
+    position: relative; /* Ensure proper stacking */
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+.account-details-header {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.account-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.account-details strong {
+    color: #333;
+}
+
+/* Buttons for Edit and Change Password */
+.edit-button,
+.change-password-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    z-index: 2; /* Ensure buttons are above the overlay */
+}
+
+.edit-button:hover,
+.change-password-button:hover {
+    background-color: #256526;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .account-details-container {
+        width: 100%;
+    }
+
+    .profile-pic-img {
+        width: 120px;
+        height: 120px;
+    }
+}

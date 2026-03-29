@@ -1,0 +1,166 @@
+.dashboard-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  .dashboard-content {
+    flex: 1;
+    padding: 20px;
+    background-image: url('/src/assets/msu1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+  .dashboard-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 229, 200, 0.8);
+    z-index: 1;
+}
+
+/* Content Styling */
+.dashboard-content > * {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the background */
+}
+  
+  .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  
+  .year-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .year-box h2 {
+    font-size: 24px;
+    margin: 0;
+    color: #2e7d32;
+  }
+  
+  .year-box .bold {
+    font-weight: bold;
+  }
+  
+  .year-box .year {
+    background-color: #388e3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+  
+  .stat-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-box h3 {
+    font-size: 28px;
+    margin: 0;
+    color: #2e7d32;
+  }
+  
+  .stat-box p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .chart {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0px;
+    width: 400px; /* Increased chart width */
+    height: 400px; /* Increased chart height */
+}
+  
+  .chart-container {
+    display: flex;
+    gap: 20px; /* Space between chart and boxes */
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+  
+  .info-boxes {
+    display: grid; /* Arrange boxes in a grid */
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 15px;
+    width: 611px;
+    height: 440px;
+    margin-left: 8px;
+  }
+  
+  .info-box {
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2e7d32;
+  }
+  
+  .info-box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .chart-box {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 550px; /* Increased max width */
+    width: fit-content;
+    margin-left: 8px; /* Small space on the left */
+  }
+  
+  .bar-chart-container {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 8px;
+  }
+
+  .graph-box {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    width: 800px; /* Adjust the width to match larger dimensions */
+    height: 400px; /* Adjust the height to match larger dimensions */
+  }

@@ -1,0 +1,70 @@
+.map-schedules-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce gap to bring button closer to the heading */
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.map-schedules-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Box container for MAP and SCHEDULES */
+.map-schedules-boxes {
+    display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
+}
+
+.map-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    padding: 10px 15px; /* Space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for the boxes */
+.map-box:hover {
+    background-color: #8fc796; /* Change background color on hover */
+    color: black; /* Change text color to black on hover */
+}
+
+.schedules-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    padding: 10px 15px; /* Space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Styling for the MAP and SCHEDULES boxes */
+.map-box, .schedules-box {
+    background-color: #25492b;
+    border-radius: 0;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Cambria, serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.map-box:hover, .schedules-box:hover {
+    background-color: #8fc796;
+    color: black;
+}

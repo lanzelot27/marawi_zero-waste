@@ -1,0 +1,239 @@
+/* General Page Styling */
+.community-content {
+    margin-left: 220px;
+    padding: 20px;
+    background: url('/src/assets/msu1.png') center/cover no-repeat;
+    position: relative;
+    min-height: 100vh;
+    z-index: 2;
+}
+
+.community-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 229, 200, 0.7);
+    z-index: 1;
+}
+
+.community-content > * {
+    position: relative;
+    z-index: 2; /* Ensures content appears above background */
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 20px; 
+}
+
+.header h1 {
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Schedule Cards Container */
+.schedule-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    justify-content: flex-start; /* Align all cards to the left */
+    padding-right: 0; /* Remove extra padding to the right */
+    margin-left: 50px; /* Move the entire container slightly to the right */
+}
+
+/* Individual Schedule Card */
+.schedule-card {
+    background-color: #b8ff96; /* Light green background */
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.schedule-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.schedule-card p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: black;
+}
+
+/* Search Bar Container */
+.search-bar-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end; /* Align the search bar to the right */
+    position: relative;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 300px;
+    padding: 10px 35px 10px 15px; /* Add space for the search icon */
+    font-size: 1em;
+    border: 2px solid #25492b; /* Green border */
+    border-radius: 25px;
+    outline: none;
+    background-color: white;
+    color: #333;
+}
+
+/* Search Icon Styling */
+.search-bar-container::after {
+    content: '🔍'; /* Unicode for magnifying glass */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #25492b;
+    pointer-events: none;
+}
+
+/* Filter Buttons Container */
+.filter-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Filter Button Styling */
+.filter-button {
+    background-color: #f0f4f8;
+    color: #25492b;
+    border: 2px solid #25492b;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Active Button Styling */
+.filter-button.active {
+    background-color: #35a722;
+    color: white;
+    border-color: #35a722;
+}
+
+/* Hover Effects */
+.filter-button:hover {
+    background-color: #8fc796;
+    color: black;
+}
+
+/* FullCalendar Container */
+.calendar-container {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 3;
+    
+}
+
+/* Optional: Better font and border in calendar */
+.fc {
+    font-family: 'Arial', sans-serif;
+    color: #25492b;
+}
+
+/* Limit height of a day cell's content */
+.fc .fc-daygrid-day-frame {
+    max-height: 100px; /* You can adjust this */
+    overflow-y: auto;
+}
+
+/* Optional: Make scrollbars hidden until hover */
+.fc .fc-daygrid-day-frame::-webkit-scrollbar {
+    width: 5px;
+}
+
+.fc .fc-daygrid-day-frame::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.fc .fc-daygrid-day-frame::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fc-day-label-wrapper {
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  
+  .fc-waste-label {
+    font-weight: bold;
+  }
+  
+  .custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-modal {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .custom-modal h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #25492b;
+  }
+  
+  .custom-modal p {
+    margin: 5px 0;
+    color: #333;
+  }
+  
+  .close-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #25492b;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover {
+    background-color: #1c361f;
+  }
+  

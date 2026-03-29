@@ -1,0 +1,153 @@
+/* General Admin Content Styling */
+.admin-content {
+    padding: 20px;
+}
+
+/* Header Styling */
+.manage-proof-header {
+    margin-bottom: 20px;
+}
+
+.manage-proof-header h1 {
+    font-size: 24px;
+    color: #25492b;
+    font-weight: bold;
+}
+
+/* Proofs Container */
+.proofs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Proof Card */
+.proof-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proof-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.proof-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.proof-body p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.proof-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.proof-footer span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.view-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.view-button:hover {
+    background-color: #3e8e41;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* View Proof Modal */
+.view-proof-modal {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #25492b;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    color: #25492b;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal-body p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.proof-image {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-points-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.add-points-btn:hover {
+    background-color: #218838;
+}

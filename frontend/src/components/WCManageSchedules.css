@@ -1,0 +1,74 @@
+.wastecollector-header h1 {
+    font-size: 30px;
+    color: #000000; /* Adjust the color if needed */
+    font-weight: bold;
+    font-family: 'Calistoga', sans-serif;
+    margin-bottom: 20px; /* Add some spacing if required */
+}
+
+.schedule-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual schedule card */
+.schedule-card {
+    background-color: #baffc9; /* Light green background */
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Card headings */
+.schedule-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.schedule-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+/* Buttons inside the card */
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Update button */
+.update-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Delete button */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Button hover effects */
+.update-btn:hover {
+    background-color: #218838;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}

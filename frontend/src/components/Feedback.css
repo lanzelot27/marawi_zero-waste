@@ -1,0 +1,116 @@
+/* Feedback Page with Background and Opacity Layer */
+.feedback-page {
+    display: flex;
+    min-height: 100vh;
+    background: url('/src/assets/msu1.png') center/cover no-repeat; /* Add your background image path */
+    position: relative;
+    z-index: 0;
+    margin-top: 30px;
+    margin-left: 220px; /* Sidebar offset */
+}
+
+.feedback-page::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 229, 200, 0.7); /* Opacity layer */
+    z-index: 1;
+}
+
+.feedback-container {
+    position: relative;
+    z-index: 2; /* Ensure the container is above the background and opacity layer */
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    font-family: "Cambria, serif";
+    text-align: center;
+}
+
+.feedback-heading {
+    color: #015a00;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.feedback-subheading {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.emoji-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.emoji-wrapper.selected {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.emoji {
+    font-size: 32px;
+}
+
+.feedback-textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    height: 120px;
+    resize: none;
+    font-family: "Cambria, serif";
+}
+
+.feedback-button {
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background: #015a00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.feedback-button:hover {
+    background: #017b00;
+}
+
+.success-message {
+    margin-top: 20px;
+    color: #228b22;
+    font-size: 16px;
+    font-family: "Cambria, serif";
+}

@@ -1,0 +1,654 @@
+/* DASHBOARD */
+
+.admin-page, .admin-content, .dashboard-content {
+    background-color: white;
+}
+
+.admin-dashboard {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    height: 100vh;
+    color: #333;
+}
+
+.admin-dashboard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/src/assets/msu1.png') center/cover no-repeat;
+    z-index: 1;
+}
+
+.admin-dashboard::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 229, 200, 0.8); /* #c8e5c8 with opacity */
+    z-index: 2;
+}
+
+/* Dashboard Header Styling */
+.dashboard-header {
+    position: relative;
+    z-index: 3;
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-family: 'Binate', sans-serif; 
+}
+
+.dashboard-header h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'Binate', sans-serif; 
+}
+
+/* Dashboard Grid Layout */
+.dashboard-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.dashboard-item {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-background {
+    background-color: #8fc796;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.dashboard-item:hover .icon-background {
+    transform: translateY(-5px);
+}
+
+.icon-background img {
+    width: 60px;
+    height: 60px;
+}
+
+.dashboard-item span {
+    font-size: 16px;
+    font-family: 'Cambria', serif;
+    font-weight: bold;
+}
+
+/* Layout Adjustments for Specific Items */
+.dashboard-item:nth-child(1),
+.dashboard-item:nth-child(2),
+.dashboard-item:nth-child(3) {
+    margin-left: 100px;
+}
+
+.dashboard-item:nth-child(4),
+.dashboard-item:nth-child(5),
+.dashboard-item:nth-child(6),
+.dashboard-item:nth-child(7) {
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-item {
+        width: 120px;
+        padding: 15px;
+    }
+
+    .icon-background {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-background img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dashboard-item span {
+        font-size: 14px;
+    }
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+    width: 220px;
+    background-color: #648664;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+.admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 45px 0 0;
+}
+
+.admin-sidebar li {
+    border-bottom: 1px solid white;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+.admin-sidebar a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+}
+
+.admin-sidebar a:hover {
+    color: #000000;
+}
+
+.dashboard-content {
+    position: relative;
+    z-index: 3;
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Admin Page Layout for Content Area */
+.admin-page {
+    display: flex;
+}
+
+.admin-content {
+    flex-grow: 1;
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Manage Accounts */
+
+.manage-accounts-header {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Space at the top */
+}
+
+.manage-accounts-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Calistoga', serif; /* Apply Calistoga font */
+    margin-right: 20px; /* Space between the title and button */
+}
+
+/* Container for Waste Collector and Community boxes */
+.account-boxes {
+    display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
+}
+
+/* Styling for Waste Collector and Community boxes */
+.account-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    padding: 10px 15px; /* Space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for the boxes */
+.account-box:hover {
+    background-color: #8fc796; /* Change background color on hover */
+    color: black; /* Change text color to black on hover */
+}
+
+/* Manage Dashboard */
+
+.manage-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Added space at the top */
+}
+
+.manage-dashboard-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Manage Map Schedules */
+
+.manage-map-schedules-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Reduce gap to bring button closer to the heading */
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.manage-map-schedules-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Box container for MAP and SCHEDULES */
+.map-schedules-boxes {
+    display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
+}
+
+.map-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    padding: 10px 15px; /* Space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for the boxes */
+.map-box:hover {
+    background-color: #8fc796; /* Change background color on hover */
+    color: black; /* Change text color to black on hover */
+}
+
+.schedules-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    padding: 10px 15px; /* Space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Styling for the MAP and SCHEDULES boxes */
+.map-box, .schedules-box {
+    background-color: #25492b;
+    border-radius: 0;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Cambria, serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.map-box:hover, .schedules-box:hover {
+    background-color: #8fc796;
+    color: black;
+}
+
+/* Manage Resources */
+.manage-resources-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Space at the top */
+}
+
+.manage-resources-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Box container for Resources */
+.resources-boxes {
+    display: flex;
+    flex-direction: column; /* Stack the boxes vertically */
+}
+
+/* Styling for each resource box */
+.resource-box {
+    background-color: #25492b; /* Green color for the boxes */
+    color: white;
+    border: 2px solid white; /* White border around each box */
+    border-radius: 0; /* No rounded corners */
+    padding: 10px 15px; /* Small space on the left */
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Cambria, serif; /* Font set to Cambria */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+.resource-box:hover {
+    background-color: #8fc796; /* Change background color on hover */
+    color: black; /* Change text color to black on hover */
+}
+
+
+/* Manage Point System */
+
+.manage-point-system-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Added space at the top */
+}
+
+.manage-point-system-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Manage Message */
+
+.manage-message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Added space at the top */
+}
+
+.manage-message-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Manage Feedback */
+
+.manage-feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-top: 50px; /* Added space at the top */
+}
+
+.manage-feedback-header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.add-account-btn {
+    background-color: #2e6130;
+    color: white;
+    padding: 8px 22px;
+    font-size: 1em;
+    font-weight: normal;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Cambria', serif; /* Apply Cambria font */
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Calistoga', serif;
+    margin: 0; /* Remove default margin */
+}
+
+.add-account-btn:hover {
+    background-color: #8fc796;
+    color: black;
+}
+
+/* Container for the account buttons */
+.accounts-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Styling for the account buttons */
+.account-button {
+    background-color: #25492b;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Cambria, serif;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the account buttons */
+.account-button:hover {
+    background-color: #8fc796;
+    color: black;
+}
+
+
+/* VIEW */
+.account-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.account-table th,
+.account-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Make the table header bold */
+.account-table th {
+    background-color: #fff;
+    color: black;
+    font-weight: bold; /* Set header text to bold */
+}
+
+/* Add bold lines under table headers and rows */
+.account-table tr {
+    border-bottom: 3px solid black; /* Makes the line bold */
+}
+
+.account-table td,
+.account-table th {
+    border: none; /* Remove box borders */
+}
+
+.action-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background-color: #2e7d32;
+    color: white;
+    z-index: 10;
+}
+
+.del-btn {
+    background-color: #d32f2f;
+    color: white;
+    z-index: 10;
+}
+
+.leaflet-container {
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaflet-popup-content {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .leaflet-popup-content button {
+    background: #d32f2f;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .leaflet-popup-content button:hover {
+    background: #c62828;
+  }
+  
+  .location-selector {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e6f9e6;
+    border: 1px solid #28a745;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    z-index: 1000;
+  }
+  
+  .location-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .location-option {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .location-option.selected {
+    background: #28a745;
+    color: white;
+  }
+  
+  .location-option:hover {
+    background: #c3e6cb;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .set-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .set-button:hover {
+    background: #218838;
+  }
+  
+  .cancel-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button:hover {
+    background: #c82333;
+  }
+  
